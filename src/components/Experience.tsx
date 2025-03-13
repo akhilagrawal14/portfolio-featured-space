@@ -21,7 +21,11 @@ const experiences = [
     period: "April 2024 - July 2024",
     location: "Chennai, India",
     description: "Promoted to higher role with increased responsibilities in ML system design and implementation.",
-    achievements: []
+    achievements: [
+      "Worked on OCR component For Xfinity TV to validate voice query and output in TV is good enough or not. It will be used to remove human validator in the loop.",
+      "Developed sports-focused Large Language Model(LLM) utilizing RAG-based vector and summary indexing for comprehensive sports information retrieval (captions & web sources).",
+      "Engineered a video scene search system that leveraged natural language processing to accurately identify scenes based on text descriptions. This system is currently in production and is being used by ad tech clients."
+    ]
   },
   {
     title: "Machine Learning Engineer 2",
@@ -30,11 +34,8 @@ const experiences = [
     location: "Chennai, India",
     description: "Developed and deployed various ML solutions for video processing, scene recognition, and content analysis.",
     achievements: [
-      "Engineered a video scene search system using natural language processing to identify scenes based on text descriptions",
-      "Owned development of high precision celebrity recognition framework (data, model, deployment)",
-      "Developed sports-focused Large Language Model(LLM) utilizing RAG-based vector and summary indexing",
+      "Owned development of high precision celebrity recognition framework (data, model, deployment). Now productionized and used by NBC, Sky, and other popular broadcaster platforms.",
       "Developed a machine learning-based movie poster generator from movie scenes and transcripts",
-      "Worked on OCR component for Xfinity TV to validate voice query and output",
       "Conducted research on vector databases like Milvus for face matching, logo search, and audio search",
       "Developed an Image captioning system to explore more relevant content of videos",
       "Developed a proof of concept for Intro detection of TV-series using audio features"

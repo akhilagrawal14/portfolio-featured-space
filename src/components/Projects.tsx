@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, FolderOpen, Award } from 'lucide-react';
+import { Github, FolderOpen, Award } from 'lucide-react';
 
 const projects = [
   {
@@ -11,7 +11,6 @@ const projects = [
     description: "Developed a high-precision fruit detection model using YOLOv9, trained on a custom dataset of 10 fruit classes with bounding box annotations. Achieved mAP50 of 0.791, precision 0.81 and recall 0.689 with limited training data.",
     image: "https://images.unsplash.com/photo-1490885578174-acda8905c2c6?auto=format&fit=crop&w=800&q=80",
     tags: ["Computer Vision", "YOLOv9", "Object Detection", "PyTorch"],
-    liveLink: "#",
     repoLink: "https://github.com",
     applications: ["Logistic automation", "Autonomous fruit harvesting robots"]
   },
@@ -20,7 +19,6 @@ const projects = [
     description: "Implemented novel neural style transfer architecture based on VGG16. Designed and coded an efficient style transfer pipeline that generates artistic visuals with exceptional quality and customizable stylization effects.",
     image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80",
     tags: ["Neural Style Transfer", "VGG16", "PyTorch", "Computer Vision"],
-    liveLink: "#",
     repoLink: "https://github.com",
     applications: ["Artistic exploration", "Image editing and stylization"]
   },
@@ -29,16 +27,14 @@ const projects = [
     description: "Developed a machine learning model to automatically skip songs in movies using audio features extraction and classification. The framework outputs timestamps of songs present in movies with 90% accuracy and only 2-second average deviation.",
     image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
     tags: ["Audio Classification", "PANNs", "Feature Extraction", "Machine Learning"],
-    liveLink: "#",
     repoLink: "https://github.com",
     applications: ["Movie editing", "Content modification", "Viewer experience enhancement"]
   },
   {
     title: "Anemia Detection from Retinal Images",
     description: "Collaborated with Sankara Nethralaya to detect anemia from retinal fundus images using deep learning. Experimented with MobileNet V2, DenseNet 121, and ResNet50 models, achieving an AUC of 0.65 with data augmentation to address imbalance.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+    image: "/lovable-uploads/62b44eb4-5908-47d5-a97e-3bc5982175bf.png",
     tags: ["Medical AI", "CNN", "Gradcam", "Data Augmentation"],
-    liveLink: "#",
     repoLink: "https://github.com",
     applications: ["Medical diagnostics", "Non-invasive disease detection"]
   },
@@ -97,12 +93,6 @@ const Projects = () => {
                       <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
                         <Github size={16} className="mr-2" />
                         Code
-                      </a>
-                    </Button>
-                    <Button size="sm" asChild>
-                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} className="mr-2" />
-                        Demo
                       </a>
                     </Button>
                   </div>

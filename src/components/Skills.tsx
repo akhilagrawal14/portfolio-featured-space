@@ -19,9 +19,9 @@ const skillCategories: SkillCategory[] = [
     icon: <Code className="text-primary" size={24} />,
     skills: [
       { name: "Python", level: 95 },
-      { name: "R", level: 80 },
-      { name: "C++", level: 75 },
-      { name: "C", level: 70 },
+      { name: "R", level: 75 },
+      { name: "C++", level: 80 },
+      { name: "C", level: 85 },
     ]
   },
   {
@@ -32,7 +32,7 @@ const skillCategories: SkillCategory[] = [
       { name: "TensorFlow", level: 85 },
       { name: "Keras", level: 85 },
       { name: "ONNX", level: 80 },
-      { name: "OpenVINO", level: 75 },
+      { name: "OpenVINO", level: 90 },
     ]
   },
   {
@@ -50,7 +50,7 @@ const skillCategories: SkillCategory[] = [
     name: "MLOps",
     icon: <Workflow className="text-primary" size={24} />,
     skills: [
-      { name: "MLflow", level: 85 },
+      { name: "MLflow", level: 90 },
       { name: "DVC", level: 80 },
       { name: "ZenML", level: 75 },
       { name: "RAY", level: 85 },
@@ -61,9 +61,9 @@ const skillCategories: SkillCategory[] = [
     name: "Containerization & Web",
     icon: <Server className="text-primary" size={24} />,
     skills: [
-      { name: "Docker", level: 85 },
+      { name: "Docker", level: 95 },
       { name: "Kubernetes", level: 75 },
-      { name: "FastAPI", level: 85 },
+      { name: "FastAPI", level: 90 },
       { name: "Flask", level: 80 },
     ]
   },
@@ -71,9 +71,9 @@ const skillCategories: SkillCategory[] = [
     name: "Cloud & Tools",
     icon: <Cloud className="text-primary" size={24} />,
     skills: [
-      { name: "AWS", level: 85 },
+      { name: "AWS", level: 90 },
       { name: "AWS Sagemaker", level: 80 },
-      { name: "GCP", level: 75 },
+      { name: "GCP", level: 90 },
       { name: "CVAT", level: 80 },
       { name: "Label Studio", level: 85 },
     ]
