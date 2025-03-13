@@ -19,14 +19,6 @@ const educationHistory = [
     location: "Indore, India",
     period: "2015 - 2019",
     description: "Completed undergraduate studies with CGPA of 8.24/10. Engaged in various technical projects and participated in competitive programming competitions."
-  },
-  {
-    degree: "GATE CSE",
-    field: "Computer Science and Engineering",
-    institution: "Graduate Aptitude Test in Engineering",
-    location: "India",
-    period: "2019",
-    description: "Qualified GATE CSE 2019 with an All India Rank of 388 (99.66 percentile), demonstrating strong foundational knowledge in computer science concepts."
   }
 ];
 

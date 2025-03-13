@@ -34,15 +34,15 @@ const Hero = () => {
                 <a href="#contact">Get in Touch</a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+                <a href="https://drive.google.com/file/d/1BbSzC4onFyUdF5VK3s05TzB2tVZ76JSe/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download CV</a>
               </Button>
             </div>
             
             <div className="flex items-center gap-4 pt-2">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
+              <a href="https://github.com/akhilagrawal14" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
                 <Github size={24} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/akhilagrawal-ml/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={24} />
               </a>
               <a href="mailto:akhilagrawal14@gmail.com" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">

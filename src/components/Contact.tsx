@@ -23,8 +23,7 @@ const Contact = () => {
           <div className="opacity-0 animate-fade-in">
             <h3 className="text-2xl font-heading font-semibold mb-6">Contact Information</h3>
             <p className="text-muted-foreground mb-8 max-w-md">
-              I'm interested in freelance opportunities, especially ambitious or large projects. 
-              However, if you have other requests or questions, don't hesitate to contact me.
+              If you have any requests or questions, don't hesitate to contact me.
             </p>
             
             <div className="space-y-6">
@@ -34,7 +33,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+91 9584293402</p>
                 </div>
               </div>
               
@@ -44,7 +43,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-muted-foreground">your.email@example.com</p>
+                  <p className="text-muted-foreground">akhilagrawal14@gmail.com</p>
                 </div>
               </div>
               
@@ -54,7 +53,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
-                  <p className="text-muted-foreground">City, Country</p>
+                  <p className="text-muted-foreground">Mumbai, India</p>
                 </div>
               </div>
             </div>

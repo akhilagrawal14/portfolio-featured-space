@@ -31,10 +31,10 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
+            <a href="https://github.com/akhilagrawal14" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/akhilagrawal-ml/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
               <Linkedin size={20} />
             </a>
             <a href="mailto:akhilagrawal14@gmail.com" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
