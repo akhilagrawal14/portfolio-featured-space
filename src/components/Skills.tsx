@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { Code, Database, PenTool, Layers, BarChart, Users } from 'lucide-react';
+import { Code, Database, PenTool, Layers, BarChart, Server, Cloud, Workflow } from 'lucide-react';
 
 interface SkillCategory {
   name: string;
@@ -15,63 +15,67 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    name: "Programming",
+    name: "Programming Languages",
     icon: <Code className="text-primary" size={24} />,
     skills: [
-      { name: "JavaScript", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "Python", level: 75 },
-      { name: "Java", level: 65 },
+      { name: "Python", level: 95 },
+      { name: "R", level: 80 },
+      { name: "C++", level: 75 },
+      { name: "C", level: 70 },
     ]
   },
   {
-    name: "Databases",
-    icon: <Database className="text-primary" size={24} />,
-    skills: [
-      { name: "SQL", level: 80 },
-      { name: "MongoDB", level: 70 },
-      { name: "Firebase", level: 75 },
-      { name: "Redis", level: 60 },
-    ]
-  },
-  {
-    name: "Design",
-    icon: <PenTool className="text-primary" size={24} />,
-    skills: [
-      { name: "UI/UX", level: 85 },
-      { name: "Figma", level: 80 },
-      { name: "Adobe XD", level: 70 },
-      { name: "Photoshop", level: 65 },
-    ]
-  },
-  {
-    name: "Frameworks",
+    name: "Deep Learning",
     icon: <Layers className="text-primary" size={24} />,
     skills: [
-      { name: "React", level: 90 },
-      { name: "Vue", level: 75 },
-      { name: "Angular", level: 65 },
-      { name: "Express", level: 80 },
+      { name: "PyTorch", level: 90 },
+      { name: "TensorFlow", level: 85 },
+      { name: "Keras", level: 85 },
+      { name: "ONNX", level: 80 },
+      { name: "OpenVINO", level: 75 },
     ]
   },
   {
-    name: "Analytics",
-    icon: <BarChart className="text-primary" size={24} />,
+    name: "Python Libraries",
+    icon: <Code className="text-primary" size={24} />,
     skills: [
-      { name: "Data Analysis", level: 70 },
-      { name: "Google Analytics", level: 75 },
-      { name: "Data Visualization", level: 80 },
-      { name: "Power BI", level: 65 },
+      { name: "NumPy/Pandas", level: 95 },
+      { name: "Scikit-Learn", level: 90 },
+      { name: "OpenCV", level: 90 },
+      { name: "Matplotlib/Seaborn", level: 85 },
+      { name: "Streamlit", level: 80 },
     ]
   },
   {
-    name: "Soft Skills",
-    icon: <Users className="text-primary" size={24} />,
+    name: "MLOps",
+    icon: <Workflow className="text-primary" size={24} />,
     skills: [
-      { name: "Communication", level: 90 },
-      { name: "Team Leadership", level: 85 },
-      { name: "Problem Solving", level: 95 },
-      { name: "Time Management", level: 80 },
+      { name: "MLflow", level: 85 },
+      { name: "DVC", level: 80 },
+      { name: "ZenML", level: 75 },
+      { name: "RAY", level: 85 },
+      { name: "NVIDIA Triton", level: 80 },
+    ]
+  },
+  {
+    name: "Containerization & Web",
+    icon: <Server className="text-primary" size={24} />,
+    skills: [
+      { name: "Docker", level: 85 },
+      { name: "Kubernetes", level: 75 },
+      { name: "FastAPI", level: 85 },
+      { name: "Flask", level: 80 },
+    ]
+  },
+  {
+    name: "Cloud & Tools",
+    icon: <Cloud className="text-primary" size={24} />,
+    skills: [
+      { name: "AWS", level: 85 },
+      { name: "AWS Sagemaker", level: 80 },
+      { name: "GCP", level: 75 },
+      { name: "CVAT", level: 80 },
+      { name: "Label Studio", level: 85 },
     ]
   },
 ];

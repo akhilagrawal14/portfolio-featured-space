@@ -11,7 +11,7 @@ import Contact from '@/components/Contact';
 const Index = () => {
   useEffect(() => {
     // Set the document title
-    document.title = "Your Name - Professional Portfolio";
+    document.title = "Akhil Agrawal - ML Engineer Portfolio";
   }, []);
 
   return (

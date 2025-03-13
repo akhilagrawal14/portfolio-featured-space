@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -10,13 +10,23 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 opacity-0 animate-fade-in">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-bold text-foreground leading-tight">
-              Hi, I'm <span className="text-primary">Your Name</span>
+              Hi, I'm <span className="text-primary">Akhil Agrawal</span>
             </h1>
             <h2 className="text-xl sm:text-2xl md:text-3xl text-muted-foreground">
-              Professional Title
+              Machine Learning Engineer
             </h2>
+            <div className="flex flex-col space-y-2 text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <MapPin size={16} className="text-primary" />
+                <span>Mumbai, India</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone size={16} className="text-primary" />
+                <span>+91 9584293402</span>
+              </div>
+            </div>
             <p className="text-lg text-muted-foreground max-w-lg">
-              A passionate professional with experience in your field. I specialize in creating effective solutions and delivering high-quality results.
+              A passionate Machine Learning Engineer with extensive experience in computer vision, natural language processing, and deploying ML solutions to production.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -35,7 +45,7 @@ const Hero = () => {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={24} />
               </a>
-              <a href="mailto:your.email@example.com" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
+              <a href="mailto:akhilagrawal14@gmail.com" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
                 <Mail size={24} />
               </a>
             </div>

@@ -5,28 +5,28 @@ import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 
 const educationHistory = [
   {
-    degree: "Master's Degree",
-    field: "Field of Study",
-    institution: "University Name",
-    location: "City, Country",
-    period: "2018 - 2020",
-    description: "Graduated with honors. Specialized in relevant areas with focus on practical applications. Participated in research projects and published papers in academic journals."
+    degree: "M.Tech in Computer Science and Engineering",
+    field: "Computer Science and Engineering",
+    institution: "Indian Statistical Institute",
+    location: "Kolkata, India",
+    period: "2019 - 2021",
+    description: "Completed Master's degree with 84.9% aggregate. Specialized in machine learning and computer vision technologies with a focus on practical applications in image processing and data analysis."
   },
   {
-    degree: "Bachelor's Degree",
-    field: "Field of Study",
-    institution: "University Name",
-    location: "City, Country",
-    period: "2014 - 2018",
-    description: "Completed undergraduate studies with distinction. Engaged in extracurricular activities including club leadership, volunteer work, and internships to gain practical experience."
+    degree: "Bachelor of Engineering",
+    field: "Information Technology",
+    institution: "Institute of Engineering And Technology",
+    location: "Indore, India",
+    period: "2015 - 2019",
+    description: "Completed undergraduate studies with CGPA of 8.24/10. Engaged in various technical projects and participated in competitive programming competitions."
   },
   {
-    degree: "Professional Certification",
-    field: "Specialization Area",
-    institution: "Certification Authority",
-    location: "Online / City, Country",
-    period: "2021",
-    description: "Advanced professional certification demonstrating expertise in specialized areas. Completed rigorous examination and practical assessments to validate skills."
+    degree: "GATE CSE",
+    field: "Computer Science and Engineering",
+    institution: "Graduate Aptitude Test in Engineering",
+    location: "India",
+    period: "2019",
+    description: "Qualified GATE CSE 2019 with an All India Rank of 388 (99.66 percentile), demonstrating strong foundational knowledge in computer science concepts."
   }
 ];
 

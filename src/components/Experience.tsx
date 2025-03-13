@@ -5,38 +5,54 @@ import { Briefcase, ArrowRight } from 'lucide-react';
 
 const experiences = [
   {
-    title: "Senior Position",
-    company: "Company Name",
-    period: "2020 - Present",
-    description: "Led a team of professionals in developing and implementing strategies that increased efficiency by 30%. Managed multiple projects simultaneously while meeting deadlines and exceeding expectations.",
+    title: "Machine Learning Engineer- SDE 2",
+    company: "Fynd (Shopsense Retail Technologies Ltd.)",
+    period: "July 2024 - Present",
+    location: "Mumbai, India",
+    description: "Leading ML engineering initiatives at Fynd, focusing on advanced computer vision applications and production-ready ML systems.",
     achievements: [
-      "Increased department productivity by 25% through process optimization",
-      "Led a team of 10 professionals across multiple departments",
-      "Implemented new technologies that reduced costs by 15%"
+      "Owned and developed Video SuperResolution model end to end which successfully went to production",
+      "Collaborated with the team to integrate ray-serve in the development"
     ]
   },
   {
-    title: "Mid-level Position",
-    company: "Previous Company",
-    period: "2017 - 2020",
-    description: "Collaborated with cross-functional teams to develop and implement strategies. Responsible for managing projects from concept to completion while ensuring all deliverables met quality standards.",
+    title: "Machine Learning Engineer 3",
+    company: "Comcast India Engineering Center",
+    period: "April 2024 - July 2024",
+    location: "Chennai, India",
+    description: "Promoted to higher role with increased responsibilities in ML system design and implementation.",
+    achievements: []
+  },
+  {
+    title: "Machine Learning Engineer 2",
+    company: "Comcast India Engineering Center",
+    period: "July 2021 - March 2024",
+    location: "Chennai, India",
+    description: "Developed and deployed various ML solutions for video processing, scene recognition, and content analysis.",
     achievements: [
-      "Successfully completed 20+ projects with 100% client satisfaction",
-      "Developed and maintained client relationships resulting in 40% repeat business",
-      "Implemented workflow improvements that reduced project completion time by 20%"
+      "Engineered a video scene search system using natural language processing to identify scenes based on text descriptions",
+      "Owned development of high precision celebrity recognition framework (data, model, deployment)",
+      "Developed sports-focused Large Language Model(LLM) utilizing RAG-based vector and summary indexing",
+      "Developed a machine learning-based movie poster generator from movie scenes and transcripts",
+      "Worked on OCR component for Xfinity TV to validate voice query and output",
+      "Conducted research on vector databases like Milvus for face matching, logo search, and audio search",
+      "Developed an Image captioning system to explore more relevant content of videos",
+      "Developed a proof of concept for Intro detection of TV-series using audio features"
     ]
   },
   {
-    title: "Junior Position",
-    company: "First Company",
-    period: "2015 - 2017",
-    description: "Assisted senior team members in daily operations and project execution. Gained valuable experience in all aspects of the business while developing professional skills.",
+    title: "Summer Intern - Machine Learning",
+    company: "Comcast India Engineering Center",
+    period: "May 2020 - July 2020",
+    location: "Chennai, India",
+    description: "Research internship focused on cricket match video analysis and highlight generation using ML techniques.",
     achievements: [
-      "Contributed to 15 successful projects under senior supervision",
-      "Recognized for exceptional attention to detail and problem-solving abilities",
-      "Rapidly advanced from entry-level to project lead within 18 months"
+      "Researched and identified patterns to generate cricket highlight generation using machine learning",
+      "Worked on low latency computer vision algorithms from OCR outputs",
+      "Fine-tuned Tesseract OCR model for different symbols and colors for different scorecards",
+      "Work went into production for version 1 of highlight generation used by Sky for live broadcasting"
     ]
-  },
+  }
 ];
 
 const Experience = () => {
@@ -57,21 +73,26 @@ const Experience = () => {
                     <div className="md:col-span-1">
                       <div className="text-sm text-muted-foreground">{job.period}</div>
                       <h3 className="font-heading font-semibold text-lg mt-1">{job.company}</h3>
+                      <div className="text-sm text-muted-foreground mt-1">{job.location}</div>
                     </div>
                     
                     <div className="md:col-span-3">
                       <h3 className="font-heading font-semibold text-xl mb-2 text-primary">{job.title}</h3>
                       <p className="text-muted-foreground mb-4">{job.description}</p>
                       
-                      <h4 className="font-semibold mb-2">Key Achievements:</h4>
-                      <ul className="space-y-2">
-                        {job.achievements.map((achievement, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <ArrowRight size={16} className="text-primary mr-2 mt-1 flex-shrink-0" />
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {job.achievements.length > 0 && (
+                        <>
+                          <h4 className="font-semibold mb-2">Key Achievements:</h4>
+                          <ul className="space-y-2">
+                            {job.achievements.map((achievement, idx) => (
+                              <li key={idx} className="flex items-start">
+                                <ArrowRight size={16} className="text-primary mr-2 mt-1 flex-shrink-0" />
+                                <span>{achievement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
                     </div>
                   </div>
                 </CardContent>
