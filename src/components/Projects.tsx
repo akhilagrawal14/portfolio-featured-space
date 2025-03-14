@@ -12,7 +12,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1490885578174-acda8905c2c6?auto=format&fit=crop&w=800&q=80",
     tags: ["Computer Vision", "YOLOv9", "Object Detection", "PyTorch"],
     repoLink: "https://github.com/akhilagrawal14/fruit_detection_yolov4",
-    applications: ["Logistic automation", "Autonomous fruit harvesting robots"]
+    applications: ["Logistic automation", "Autonomous fruit harvesting robots"],
+    hasPublicCode: true
   },
   {
     title: "Neural Style Transfer From Scratch",
@@ -20,7 +21,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80",
     tags: ["Neural Style Transfer", "VGG16", "PyTorch", "Computer Vision"],
     repoLink: "https://github.com/akhilagrawal14/computer_vision/tree/main/deep_learning/neural_style_transfer",
-    applications: ["Artistic exploration", "Image editing and stylization"]
+    applications: ["Artistic exploration", "Image editing and stylization"],
+    hasPublicCode: true
   },
   {
     title: "Automatic Song Skip in Movies",
@@ -28,7 +30,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
     tags: ["Audio Classification", "PANNs", "Feature Extraction", "Machine Learning"],
     repoLink: "https://github.com",
-    applications: ["Movie editing", "Content modification", "Viewer experience enhancement"]
+    applications: ["Movie editing", "Content modification", "Viewer experience enhancement"],
+    hasPublicCode: false
   },
   {
     title: "Anemia Detection from Retinal Images",
@@ -36,7 +39,8 @@ const projects = [
     image: "/lovable-uploads/62b44eb4-5908-47d5-a97e-3bc5982175bf.png",
     tags: ["Medical AI", "CNN", "Gradcam", "Data Augmentation"],
     repoLink: "https://github.com",
-    applications: ["Medical diagnostics", "Non-invasive disease detection"]
+    applications: ["Medical diagnostics", "Non-invasive disease detection"],
+    hasPublicCode: false
   },
 ];
 
@@ -89,12 +93,14 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex gap-3 mt-4">
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
-                        <Github size={16} className="mr-2" />
-                        Code
-                      </a>
-                    </Button>
+                    {project.hasPublicCode && (
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
+                          <Github size={16} className="mr-2" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
