@@ -22,6 +22,7 @@ const skillCategories: SkillCategory[] = [
       { name: "R", level: 75 },
       { name: "C++", level: 80 },
       { name: "C", level: 85 },
+      { name: "Node.js", level: 80 },
     ]
   },
   {
@@ -76,6 +77,14 @@ const skillCategories: SkillCategory[] = [
       { name: "GCP", level: 90 },
       { name: "CVAT", level: 80 },
       { name: "Label Studio", level: 85 },
+    ]
+  },
+  {
+    name: "Data & Messaging",
+    icon: <Database className="text-primary" size={24} />,
+    skills: [
+      { name: "Kafka", level: 75 },
+      { name: "Redis", level: 75 },
     ]
   },
 ];

@@ -11,8 +11,12 @@ const experiences = [
     location: "Mumbai, India",
     description: "Leading ML engineering initiatives at Fynd, focusing on advanced computer vision applications and production-ready ML systems.",
     achievements: [
-      "Owned and developed Video SuperResolution model end to end which successfully went to production",
-      "Collaborated with the team to integrate ray-serve in the development"
+      "Developed and deployed AI models to production, including Video Super-Resolution, AI Background Extend, and Soft Shadow Generator",
+      "Deployed Flux model on dual L4 GPU instances, achieving a 45.5% cost reduction compared to A100 GPUs",
+      "Transitioned large ML models to platforms like Replicate and Fal.ai, optimizing cost and performance",
+      "Migrated machine learning workloads to Ray for improved scalability and performance",
+      "Integrated Pub/Sub and Kafka to optimize processing architecture and reduce latency",
+      "Built a video processing service that can performs frame-by-frame ML operations and generates video output"
     ]
   },
   {
