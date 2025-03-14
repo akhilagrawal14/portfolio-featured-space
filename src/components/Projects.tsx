@@ -19,7 +19,7 @@ const projects = [
     description: "Implemented novel neural style transfer architecture based on VGG16. Designed and coded an efficient style transfer pipeline that generates artistic visuals with exceptional quality and customizable stylization effects.",
     image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80",
     tags: ["Neural Style Transfer", "VGG16", "PyTorch", "Computer Vision"],
-    repoLink: "https://github.com",
+    repoLink: "https://github.com/akhilagrawal14/computer_vision/tree/main/deep_learning/neural_style_transfer",
     applications: ["Artistic exploration", "Image editing and stylization"]
   },
   {
