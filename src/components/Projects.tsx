@@ -11,7 +11,7 @@ const projects = [
     description: "Developed a high-precision fruit detection model using YOLOv9, trained on a custom dataset of 10 fruit classes with bounding box annotations. Achieved mAP50 of 0.791, precision 0.81 and recall 0.689 with limited training data.",
     image: "https://images.unsplash.com/photo-1490885578174-acda8905c2c6?auto=format&fit=crop&w=800&q=80",
     tags: ["Computer Vision", "YOLOv9", "Object Detection", "PyTorch"],
-    repoLink: "https://github.com",
+    repoLink: "https://github.com/akhilagrawal14/fruit_detection_yolov4",
     applications: ["Logistic automation", "Autonomous fruit harvesting robots"]
   },
   {
