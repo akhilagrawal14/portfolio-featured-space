@@ -52,7 +52,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1ie_1y439AYqNItcG3hx0hsn-zKODAhJF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               Resume
             </a>
           </Button>
@@ -83,7 +83,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button asChild className="w-full">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1ie_1y439AYqNItcG3hx0hsn-zKODAhJF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </Button>

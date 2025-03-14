@@ -34,7 +34,7 @@ const Hero = () => {
                 <a href="#contact">Get in Touch</a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="https://drive.google.com/file/d/1BbSzC4onFyUdF5VK3s05TzB2tVZ76JSe/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download CV</a>
+                <a href="https://drive.google.com/file/d/1ie_1y439AYqNItcG3hx0hsn-zKODAhJF/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download CV</a>
               </Button>
             </div>
             
