@@ -1,17 +1,56 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const { toast } = useToast();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log("Form submitted");
+    setIsLoading(true);
+
+    // Simple validation
+    if (!name || !email || !subject || !message) {
+      toast({
+        title: "Validation Error",
+        description: "Please fill in all fields",
+        variant: "destructive",
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    // Create the mailto URL
+    const mailtoUrl = `mailto:akhilagrawal14@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`
+    )}`;
+
+    // Open the default email client
+    window.open(mailtoUrl);
+
+    // Show success message
+    toast({
+      title: "Message sent",
+      description: "Your email client has been opened with the message details",
+    });
+
+    // Reset form
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+    setIsLoading(false);
   };
 
   return (
@@ -68,18 +107,37 @@ const Contact = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Name</Label>
-                      <Input id="name" placeholder="Your Name" required />
+                      <Input 
+                        id="name" 
+                        placeholder="Your Name" 
+                        required 
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
                     </div>
                     
                     <div className="space-y-2">
                       <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="Your Email" required />
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="Your Email" 
+                        required 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
                     </div>
                   </div>
                   
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="Subject" required />
+                    <Input 
+                      id="subject" 
+                      placeholder="Subject" 
+                      required 
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                    />
                   </div>
                   
                   <div className="space-y-2">
@@ -89,12 +147,14 @@ const Contact = () => {
                       placeholder="Your Message" 
                       rows={6} 
                       required 
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full">
+                  <Button type="submit" className="w-full" disabled={isLoading}>
                     <Send size={16} className="mr-2" />
-                    Send Message
+                    {isLoading ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
