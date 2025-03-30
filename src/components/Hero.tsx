@@ -7,8 +7,8 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-16 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6 opacity-0 animate-fade-in">
+        <div className="flex flex-col items-center lg:items-start lg:flex-row gap-8">
+          <div className="space-y-6 opacity-0 animate-fade-in max-w-2xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-bold text-foreground leading-tight">
               Hi, I'm <span className="text-primary">Akhil Agrawal</span>
             </h1>
@@ -48,19 +48,6 @@ const Hero = () => {
               <a href="mailto:akhilagrawal14@gmail.com" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
                 <Mail size={24} />
               </a>
-            </div>
-          </div>
-          
-          <div className="relative hidden lg:block opacity-0 animate-fade-in animate-delay-200">
-            <div className="aspect-square bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-full absolute -right-10 -top-10 w-80 h-80"></div>
-            <div className="aspect-square border-2 border-primary/30 rounded-full absolute right-20 top-20 w-60 h-60"></div>
-            <div className="relative z-10 bg-card shadow-lg rounded-2xl overflow-hidden border border-border">
-              <div className="aspect-[3/4] bg-muted"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <p className="text-lg font-medium">Your profile image would go here</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
