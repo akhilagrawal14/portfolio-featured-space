@@ -1,91 +1,49 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
 import { Code, Database, PenTool, Layers, BarChart, Server, Cloud, Workflow } from 'lucide-react';
 
 interface SkillCategory {
   name: string;
   icon: React.ReactNode;
-  skills: {
-    name: string;
-    level: number;
-  }[];
+  skills: string[];
 }
 
 const skillCategories: SkillCategory[] = [
   {
     name: "Programming Languages",
     icon: <Code className="text-primary" size={24} />,
-    skills: [
-      { name: "Python", level: 95 },
-      { name: "R", level: 75 },
-      { name: "C++", level: 80 },
-      { name: "C", level: 85 },
-      { name: "Node.js", level: 80 },
-    ]
+    skills: ["Python", "R", "C++", "C", "Node.js"]
   },
   {
     name: "Deep Learning",
     icon: <Layers className="text-primary" size={24} />,
-    skills: [
-      { name: "PyTorch", level: 90 },
-      { name: "TensorFlow", level: 85 },
-      { name: "Keras", level: 85 },
-      { name: "ONNX", level: 80 },
-      { name: "OpenVINO", level: 90 },
-    ]
+    skills: ["PyTorch", "TensorFlow", "Keras", "ONNX", "OpenVINO"]
   },
   {
     name: "Python Libraries",
     icon: <Code className="text-primary" size={24} />,
-    skills: [
-      { name: "NumPy/Pandas", level: 95 },
-      { name: "Scikit-Learn", level: 90 },
-      { name: "OpenCV", level: 90 },
-      { name: "Matplotlib/Seaborn", level: 85 },
-      { name: "Streamlit", level: 80 },
-    ]
+    skills: ["NumPy/Pandas", "Scikit-Learn", "OpenCV", "Matplotlib/Seaborn", "Streamlit"]
   },
   {
     name: "MLOps",
     icon: <Workflow className="text-primary" size={24} />,
-    skills: [
-      { name: "MLflow", level: 90 },
-      { name: "DVC", level: 80 },
-      { name: "ZenML", level: 75 },
-      { name: "RAY", level: 85 },
-      { name: "NVIDIA Triton", level: 80 },
-    ]
+    skills: ["MLflow", "DVC", "ZenML", "RAY", "NVIDIA Triton"]
   },
   {
     name: "Containerization & Web",
     icon: <Server className="text-primary" size={24} />,
-    skills: [
-      { name: "Docker", level: 95 },
-      { name: "Kubernetes", level: 75 },
-      { name: "FastAPI", level: 90 },
-      { name: "Flask", level: 80 },
-    ]
+    skills: ["Docker", "Kubernetes", "FastAPI", "Flask"]
   },
   {
     name: "Cloud & Tools",
     icon: <Cloud className="text-primary" size={24} />,
-    skills: [
-      { name: "AWS", level: 90 },
-      { name: "AWS Sagemaker", level: 80 },
-      { name: "GCP", level: 90 },
-      { name: "CVAT", level: 80 },
-      { name: "Label Studio", level: 85 },
-    ]
+    skills: ["AWS", "AWS Sagemaker", "GCP", "CVAT", "Label Studio"]
   },
   {
     name: "Data & Messaging",
     icon: <Database className="text-primary" size={24} />,
-    skills: [
-      { name: "Kafka", level: 75 },
-      { name: "Redis", level: 75 },
-    ]
+    skills: ["Kafka", "Redis"]
   },
 ];
 
@@ -109,17 +67,13 @@ const Skills = () => {
                     <h3 className="font-heading font-semibold text-xl">{category.name}</h3>
                   </div>
                   
-                  <div className="space-y-4">
+                  <ul className="space-y-2">
                     {category.skills.map((skill, idx) => (
-                      <div key={idx}>
-                        <div className="flex justify-between items-center mb-1">
-                          <span className="text-sm font-medium">{skill.name}</span>
-                          <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                        </div>
-                        <Progress value={skill.level} className="h-2" />
-                      </div>
+                      <li key={idx} className="text-sm font-medium">
+                        {skill}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </CardContent>
               </Card>
             </div>
