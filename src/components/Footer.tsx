@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Github, Linkedin, Mail, ArrowUp, Award } from 'lucide-react';
+import { profile } from '@/data/profile';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -15,8 +16,8 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="font-heading font-bold text-lg">Akhil Agrawal</h3>
-            <p className="text-muted-foreground text-sm">Machine Learning Engineer</p>
+            <h3 className="font-heading font-bold text-lg">{profile.name}</h3>
+            <p className="text-muted-foreground text-sm">{profile.role}</p>
           </div>
           
           <div className="flex flex-col items-center mb-4 md:mb-0">
@@ -31,13 +32,13 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <a href="https://github.com/akhilagrawal14" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/akhilagrawal-ml/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:akhilagrawal14@gmail.com" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
+            <a href={`mailto:${profile.email}`} className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
               <Mail size={20} />
             </a>
           </div>
@@ -52,7 +53,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-6 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} Akhil Agrawal. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>

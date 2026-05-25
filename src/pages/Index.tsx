@@ -7,11 +7,11 @@ import Skills from '@/components/Skills';
 import Education from '@/components/Education';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+import { profile } from '@/data/profile';
 
 const Index = () => {
   useEffect(() => {
-    // Set the document title
-    document.title = "Akhil Agrawal - ML Engineer Portfolio";
+    document.title = profile.title;
   }, []);
 
   return (

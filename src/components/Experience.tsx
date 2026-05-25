@@ -5,44 +5,32 @@ import { Briefcase, ArrowRight } from 'lucide-react';
 
 const experiences = [
   {
-    title: "Machine Learning Engineer- SDE 2",
+    title: "Machine Learning Engineer - SDE 2",
     company: "Fynd (Shopsense Retail Technologies Ltd.)",
     period: "July 2024 - Present",
     location: "Mumbai, India",
-    description: "Leading ML engineering initiatives at Fynd, focusing on advanced computer vision applications and production-ready ML systems.",
+    description: "Owns GPU-backed ML infrastructure and production model serving for image and video AI systems.",
     achievements: [
-      "Developed and deployed AI models to production, including Video Super-Resolution, AI Background Extend, and Soft Shadow Generator",
-      "Deployed Flux model on dual L4 GPU instances, achieving a 45.5% cost reduction compared to A100 GPUs",
-      "Transitioned large ML models to platforms like Replicate and Fal.ai, optimizing cost and performance",
-      "Migrated machine learning workloads to Ray for improved scalability and performance",
-      "Integrated Pub/Sub and Kafka to optimize processing architecture and reduce latency",
-      "Built a video processing service that can performs frame-by-frame ML operations and generates video output"
+      "Served as DRI for GPU-based ML infrastructure on GCP and Kubernetes, owning 40+ production models across video super-resolution, image super-resolution, and AI background removal.",
+      "Reduced GPU infrastructure costs by 28%, approximately $4,000 per month, through dynamic scaling, TensorRT, torch.compile, model quantization, and resource optimization.",
+      "Deployed Flux on dual L4 GPU instances, achieving a 45.5% cost reduction compared with A100-based deployment.",
+      "Designed an intent-aware prompt routing system for image editing, routing requests across self-hosted models, Replicate, Fal.ai, and Flux based on user intent and cost constraints.",
+      "Integrated Kafka and Pub/Sub for event-driven ML inference, reducing p95 processing latency by 20% compared with the earlier synchronous pipeline.",
+      "Migrated ML workloads to Ray for distributed execution, reducing batch processing time by 20% and compute costs by 10%."
     ]
   },
   {
-    title: "Machine Learning Engineer 3",
+    title: "Machine Learning Engineer 2 / 3",
     company: "Comcast India Engineering Center",
-    period: "April 2024 - July 2024",
+    period: "July 2021 - July 2024",
     location: "Chennai, India",
-    description: "Promoted to higher role with increased responsibilities in ML system design and implementation.",
+    description: "Built production ML systems for semantic video search, RAG-based retrieval, OCR validation, and celebrity recognition.",
     achievements: [
-      "Worked on OCR component For Xfinity TV to validate voice query and output in TV is good enough or not. It will be used to remove human validator in the loop.",
-      "Developed sports-focused Large Language Model(LLM) utilizing RAG-based vector and summary indexing for comprehensive sports information retrieval (captions & web sources).",
-      "Engineered a video scene search system that leveraged natural language processing to accurately identify scenes based on text descriptions. This system is currently in production and is being used by ad tech clients."
-    ]
-  },
-  {
-    title: "Machine Learning Engineer 2",
-    company: "Comcast India Engineering Center",
-    period: "July 2021 - March 2024",
-    location: "Chennai, India",
-    description: "Developed and deployed various ML solutions for video processing, scene recognition, and content analysis.",
-    achievements: [
-      "Owned development of high precision celebrity recognition framework (data, model, deployment). Now productionized and used by NBC, Sky, and other popular broadcaster platforms.",
-      "Developed a machine learning-based movie poster generator from movie scenes and transcripts",
-      "Conducted research on vector databases like Milvus for face matching, logo search, and audio search",
-      "Developed an Image captioning system to explore more relevant content of videos",
-      "Developed a proof of concept for Intro detection of TV-series using audio features"
+      "Built a production semantic video search system that lets ad-tech clients query scenes with natural language across 5,000+ hours of NBC, Universal Studios, and Sky content.",
+      "Used CLIP, an in-house model, vector databases, and Elasticsearch to support 2-3 second query latency with room for further scale.",
+      "Built a RAG-based sports LLM prototype using OpenAI embeddings, Milvus, summary indexing, captions, and web sources, improving retrieval precision by 38% over a keyword-search baseline.",
+      "Owned the data, model, and deployment pipeline for a celebrity recognition framework using MTCNN, FaceNet embeddings, hybrid clustering, and a 12,000+ celebrity reference dataset.",
+      "Built an OCR validation pipeline for Xfinity TV that processed 8,000+ queries per day with 94% agreement with human annotators, replacing manual QA review."
     ]
   },
   {
@@ -52,10 +40,8 @@ const experiences = [
     location: "Chennai, India",
     description: "Research internship focused on cricket match video analysis and highlight generation using ML techniques.",
     achievements: [
-      "Researched and identified patterns to generate cricket highlight generation using machine learning",
-      "Worked on low latency computer vision algorithms from OCR outputs",
-      "Fine-tuned Tesseract OCR model for different symbols and colors for different scorecards",
-      "Work went into production for version 1 of highlight generation used by Sky for live broadcasting"
+      "Developed a computer vision and OCR pipeline to detect scoreboard patterns in cricket match videos.",
+      "Contributed to a highlight generation system that went to production for Sky live broadcasting."
     ]
   }
 ];

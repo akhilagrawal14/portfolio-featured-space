@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { navLinks, profile } from '@/data/profile';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,15 +22,6 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Education', href: '#education' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
-  ];
-
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
@@ -37,7 +29,7 @@ const Navbar = () => {
     )}>
       <div className="container mx-auto py-4 flex items-center justify-between">
         <a href="#home" className="text-xl font-heading font-bold text-foreground">
-          Portfolio
+          {profile.name}
         </a>
         
         {/* Desktop navigation */}
@@ -52,7 +44,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild>
-            <a href="https://drive.google.com/file/d/1ie_1y439AYqNItcG3hx0hsn-zKODAhJF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <a href={profile.resume} target="_blank" rel="noopener noreferrer">
               Resume
             </a>
           </Button>
@@ -83,7 +75,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button asChild className="w-full">
-              <a href="https://drive.google.com/file/d/1ie_1y439AYqNItcG3hx0hsn-zKODAhJF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <a href={profile.resume} target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </Button>

@@ -5,7 +5,33 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Github, FolderOpen, Award } from 'lucide-react';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  repoLink?: string;
+  applications: string[];
+  hasPublicCode: boolean;
+}
+
+const projects: Project[] = [
+  {
+    title: "Cross-Domain Semantic Search using RAG and Gemini Embedding",
+    description: "Built a personal knowledge search tool similar to Spotlight using Gemini Embedding, supporting search across text files, PDFs, code, notes, and emails while indexing 5,000+ documents.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    tags: ["RAG", "Gemini Embedding", "FastAPI", "Hybrid Retrieval"],
+    applications: ["Personal knowledge search", "Enterprise document retrieval", "Developer productivity"],
+    hasPublicCode: false
+  },
+  {
+    title: "Multimodal Fake Content Detection",
+    description: "Built a fake-vs-real detection system across image, video, audio, and text using facial landmarks, biometric signals, computer vision features, and Gemini-based reasoning.",
+    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=800&q=80",
+    tags: ["Multimodal AI", "Computer Vision", "Gemini", "Fraud Detection"],
+    applications: ["KYC verification", "Fraud prevention", "Content authenticity"],
+    hasPublicCode: false
+  },
   {
     title: "High-Precision Fruit Detection",
     description: "Developed a high-precision fruit detection model using YOLOv9, trained on a custom dataset of 10 fruit classes with bounding box annotations. Achieved mAP50 of 0.791, precision 0.81 and recall 0.689 with limited training data.",
@@ -25,21 +51,11 @@ const projects = [
     hasPublicCode: true
   },
   {
-    title: "Automatic Song Skip in Movies",
-    description: "Developed a machine learning model to automatically skip songs in movies using audio features extraction and classification. The framework outputs timestamps of songs present in movies with 90% accuracy and only 2-second average deviation.",
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
-    tags: ["Audio Classification", "PANNs", "Feature Extraction", "Machine Learning"],
-    repoLink: "https://github.com",
-    applications: ["Movie editing", "Content modification", "Viewer experience enhancement"],
-    hasPublicCode: false
-  },
-  {
     title: "Anemia Detection from Retinal Images",
-    description: "Collaborated with Sankara Nethralaya to detect anemia from retinal fundus images using deep learning. Experimented with MobileNet V2, DenseNet 121, and ResNet50 models, achieving an AUC of 0.65 with data augmentation to address imbalance.",
+    description: "Collaborated with ISI Kolkata and Sankara Nethralaya to detect anemia from retinal fundus images. Experimented with MobileNet V2, DenseNet 121, and ResNet50, achieving 0.75 AUC on a small imbalanced clinical dataset.",
     image: "/lovable-uploads/62b44eb4-5908-47d5-a97e-3bc5982175bf.png",
     tags: ["Medical AI", "CNN", "Gradcam", "Data Augmentation"],
-    repoLink: "https://github.com",
-    applications: ["Medical diagnostics", "Non-invasive disease detection"],
+    applications: ["Medical diagnostics", "Non-invasive disease detection", "Clinical AI research"],
     hasPublicCode: false
   },
 ];
@@ -68,6 +84,7 @@ const Projects = () => {
                     src={project.image} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                    loading="lazy"
                   />
                 </div>
                 <CardContent className="p-6">
@@ -93,7 +110,7 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex gap-3 mt-4">
-                    {project.hasPublicCode && (
+                    {project.hasPublicCode && project.repoLink && (
                       <Button variant="outline" size="sm" asChild>
                         <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
                           <Github size={16} className="mr-2" />

@@ -5,52 +5,28 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
+import { Mail, MapPin, Send } from 'lucide-react';
+import { profile } from '@/data/profile';
 
 const Contact = () => {
-  const { toast } = useToast();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
 
-    // Simple validation
-    if (!name || !email || !subject || !message) {
-      toast({
-        title: "Validation Error",
-        description: "Please fill in all fields",
-        variant: "destructive",
-      });
-      setIsLoading(false);
-      return;
-    }
-
-    // Create the mailto URL
-    const mailtoUrl = `mailto:akhilagrawal14@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    const mailtoUrl = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\n\n${message}`
     )}`;
 
-    // Open the default email client
-    window.open(mailtoUrl);
+    window.location.href = mailtoUrl;
 
-    // Show success message
-    toast({
-      title: "Message sent",
-      description: "Your email client has been opened with the message details",
-    });
-
-    // Reset form
     setName('');
     setEmail('');
     setSubject('');
     setMessage('');
-    setIsLoading(false);
   };
 
   return (
@@ -62,27 +38,19 @@ const Contact = () => {
           <div className="opacity-0 animate-fade-in">
             <h3 className="text-2xl font-heading font-semibold mb-6">Contact Information</h3>
             <p className="text-muted-foreground mb-8 max-w-md">
-              If you have any requests or questions, don't hesitate to contact me.
+              For roles, collaborations, or ML engineering conversations, email is the best way to reach me.
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-primary/10 p-3 rounded-md mr-4">
-                  <Phone className="text-primary" size={20} />
-                </div>
-                <div>
-                  <h4 className="font-medium">Phone</h4>
-                  <p className="text-muted-foreground">+91 9584293402</p>
-                </div>
-              </div>
-              
               <div className="flex items-start">
                 <div className="bg-primary/10 p-3 rounded-md mr-4">
                   <Mail className="text-primary" size={20} />
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-muted-foreground">akhilagrawal14@gmail.com</p>
+                  <a href={`mailto:${profile.email}`} className="text-muted-foreground hover:text-primary transition-colors">
+                    {profile.email}
+                  </a>
                 </div>
               </div>
               
@@ -92,7 +60,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
-                  <p className="text-muted-foreground">Mumbai, India</p>
+                  <p className="text-muted-foreground">{profile.location}</p>
                 </div>
               </div>
             </div>
@@ -101,7 +69,7 @@ const Contact = () => {
           <div className="opacity-0 animate-fade-in animate-delay-200">
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-2xl font-heading font-semibold mb-6">Send Me a Message</h3>
+                <h3 className="text-2xl font-heading font-semibold mb-6">Draft an Email</h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -152,9 +120,9 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full" disabled={isLoading}>
+                  <Button type="submit" className="w-full">
                     <Send size={16} className="mr-2" />
-                    {isLoading ? "Sending..." : "Send Message"}
+                    Open Email Draft
                   </Button>
                 </form>
               </CardContent>

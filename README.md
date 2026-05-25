@@ -1,69 +1,34 @@
-# Welcome to your Lovable project
+# Akhil Agrawal Portfolio
 
-## Project info
+Personal portfolio website for Akhil Agrawal, built with Vite, React, TypeScript, shadcn-ui, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/35af8e71-d819-4a60-91b1-f7b8c6bc2fc5
+## Local Development
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/35af8e71-d819-4a60-91b1-f7b8c6bc2fc5) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```powershell
+npm.cmd install
+npm.cmd run dev
 ```
 
-**Edit a file directly in GitHub**
+The dev server is configured to run at:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```text
+http://localhost:8080/
+```
 
-**Use GitHub Codespaces**
+## Useful Commands
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```powershell
+npm.cmd run build
+npm.cmd run lint
+npm.cmd run preview
+```
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with .
+This is a static Vite app and can be deployed directly to Vercel.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Framework preset: `Vite`
+- Build command: `npm run build`
+- Output directory: `dist`
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/35af8e71-d819-4a60-91b1-f7b8c6bc2fc5) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+The contact form uses a `mailto:` link, so it does not require a backend service or external form provider.
